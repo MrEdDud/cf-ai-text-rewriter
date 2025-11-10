@@ -1,3 +1,4 @@
+/* Styling for the body */
 body {
     color: #f2e9e4;
     font-weight: bold;
@@ -8,11 +9,13 @@ body {
     padding: 0;
 }
 
+/* The title text at the top */
 .title-text {
     font-size: 2vw;
     padding: 1.6vw;
 }
 
+/* The container for the page */
 .container {
     display: grid;
     grid-template-columns: 15% 85%;
@@ -21,15 +24,17 @@ body {
     padding: 0 0 0 2.5vw;
 }
 
+/* The right column holding the main chat and input bar */
 .main {
-    overflow-y: auto;
+    overflow-y: scroll;
     background-image: linear-gradient(to left, #393d3f, #0a0908);
     color: #b21e35;
+    scroll-behavior: smooth;
 }
 
+/* The left column holding the tones */
 .sidebar {
     background-color: #0a0908;
-    top:0;
     overflow-y: auto;
 }
 
@@ -56,6 +61,7 @@ ul li a:hover {
     cursor: pointer;
 }
 
+/* Styling for the info text in the top left */
 .info-text {
     text-align: center;
     padding: 1.6vw 2vw 0 2vw;
@@ -63,6 +69,7 @@ ul li a:hover {
     color: #f2e9e4;
 }
 
+/* Styling for the input bar */
 .input {
     font-family: inherit;
     font-weight: bold;
@@ -83,6 +90,7 @@ ul li a:hover {
     cursor: pointer;
 }
 
+/* Styling for the input bar and the send button on the bottom of the screen */
 .input, .button {
     background-color: #393d3f;
     border: 0.7vh solid #b21e35;
@@ -93,28 +101,35 @@ ul li a:hover {
     padding: 2vh;
 }
 
+/* Making sure the input bar and send button are positioned correctly */
 .input-area {
     text-align: center;
     margin-top: 70vh;
     margin-bottom: 5vh;
-    position: static;
+    position: sticky;
+    bottom: 5vh;
 }
 
+/* Styling for the chat messages */
 .chat-messages {
     color: #f2e9e4;
     padding: 0 1.6vw 0 1.6vw;
 }
 
+/* Animation for the errors */
 .flash-error {
     animation: flash 1s ease-in-out;
 }
 
+/* Making the tones turn from orange to red when theres an error */
 @keyframes flash {
     from {color: #F3752B}
     to {color: #b21e35;}
 }
 
+/* Styling for the error messages */
 #typing-indicator {
     font-size: 2vw;
-    color: #F3752B;
+    padding: 0 1.6vw 0 1.6vw;
+    color: #f2e9e4;
 }

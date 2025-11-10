@@ -11,6 +11,7 @@
 </head>
 <body>
   <div class="container">
+    <!-- All the tones on the side -->
         <div class="sidebar">
             <div class="info-text">Select the tone that you want.</div>
                 <ul>
@@ -26,10 +27,11 @@
                     <li><a onclick="updateTone(this.id)" id="Sarcastic">Sarcastic</a></li>
                 </ul>
         </div>
+    <!-- The main content with the input bar and the messages -->
         <div class="main">
             <div class="title-text">AI Rewriter</div>
             <div class="chat-messages" id="chat-messages"></div>
-            <div class="chat-messages" id="typing-indicator"></div>
+            <div id="typing-indicator"></div>
             <div class="input-area">
                 <input type="text" placeholder="Enter text to rewrite" class="input" id="user-input">
                 <div class="button" id="send-button">></div>

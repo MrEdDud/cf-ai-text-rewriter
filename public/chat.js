@@ -6,15 +6,18 @@
 
 let selectedTone = null;
 
+// Updating the text on the left hand side so that when its clicked, it changes colour
 function updateTone(tone) {
     let elementId = document.getElementById(tone);
     
+    // Makes each tone on the left hand side of the page red to prevent multiple tones being orange
     document.querySelectorAll("ul li a").forEach(element => {
         element.style.color = "#b21e35";
     });
 
+    // Setting the selected tone to orange
     elementId.style.color = "#F3752B";
-
+    // Setting the tone to selectedTone for later use
     selectedTone = tone;
 }
 
@@ -139,9 +142,6 @@ async function sendMessage() {
             // Append new content to existing text
             responseText += jsonData.response;
             assistantMessageEl.querySelector("p").textContent = responseText;
-
-            // Scroll to bottom
-            chatMessages.scrollTop = chatMessages.scrollHeight;
           }
         } catch (e) {
           console.error("Error parsing JSON:", e);
@@ -158,9 +158,6 @@ async function sendMessage() {
       "Sorry, there was an error processing your request.",
     );
   } finally {
-    // Hide typing indicator
-    typingIndicator.classList.remove("visible");
-
     // Re-enable input
     isProcessing = false;
     userInput.disabled = false;
